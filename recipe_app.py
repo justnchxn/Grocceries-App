@@ -45,7 +45,7 @@ if page == "Recipes":
             if ingredients_list:
                 st.session_state.recipes[new_recipe_name] = ingredients_list
                 st.success(f"Added recipe '{new_recipe_name}'!")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.warning("Please enter at least one ingredient.")
 
