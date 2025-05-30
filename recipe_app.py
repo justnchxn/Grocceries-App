@@ -25,7 +25,7 @@ if page == "Recipes":
         cols[0].write(f"**{recipe}**: {', '.join(st.session_state.recipes[recipe])}")
         if cols[1].button("🗑️", key=f"remove_{recipe}"):
             del st.session_state.recipes[recipe]
-            st.experimental_rerun()
+            st.rerun()
 
     st.markdown("---")
     st.subheader("Add a new recipe")
